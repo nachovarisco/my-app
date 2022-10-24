@@ -10,15 +10,13 @@
 
 #main-header {
     background-color: aqua;
-    height: 200px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
     padding: 0.5 rem 1rem;
-    border-bottom: solid 5px black;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+  
   
 
 }
@@ -32,10 +30,8 @@
     background-color: aqua;
     color: rgb(0, 0, 0);
     text-align: center;
-    height: 100px;
-    border-top: solid 5px black;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
+    height: 50px;
+ 
 
 }
 
