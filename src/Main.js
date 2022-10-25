@@ -11,7 +11,14 @@ const Main = () => {
 
 
   return (
+    <>
+
+    <div id='divContador'   className= 'container'>
+      <h3 id='tituloContador'>
    <ContadorContainer/>
+     </h3>
+   </div>
+   </>
 
         
   )
