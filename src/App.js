@@ -16,8 +16,9 @@ function App(){
                <main>
         <Main/>
 
-
+<div id="userCnt">
       <UserContainer/>
+      </div>
 
         
 

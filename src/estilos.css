@@ -24,7 +24,7 @@
 
 
 #footer {
-    position: fixed;
+    position:sticky bottom;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -38,15 +38,10 @@
 
 /* 
 /* cardsssssss
- */
+ /* */
+/* 
 
 
-.container {display: inline-flex;
-    justify-content:space-around;
-    margin-inline-start: 15%;
-   
-    ;
-}
 
 card {
     display:grid;
@@ -68,23 +63,134 @@ card {
     border-bottom-width: 50%
    
    ;
-}
+} */
 
-
+ */
 
 /* 
 contador  */
+
+
+
+.container {display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    margin-inline-start: 15%;
+   
+    ;
+}
 
 #divContador {
     display:flexbox;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-left: 45%;
-    background-image: linear-gradient(white, grey);
-    border-radius: 4%;
+    margin-left: 42%;
+    max-width: 250px;
+    background-color: coral;
+    border-radius: 6px;
+    border: solid black solid 2px;
+}
+
+/* 
+
+#precioUser {
     border: solid black 2px;
 }
 
 
+#descUser {
+ 
+    border: solid black 2px;
+    visibility: hidden;
+}    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cards estilos overflow  */
+
+
+
+
+.page-wrapper {
+    padding-top: 5%;
+display: flex;
+justify-content: space-around;
+}
+
+.card-wrapper {
+    background-color: coral;
+    border-radius: 6px;
+    max-height: 110px;
+    overflow: hidden;
+    padding: 2rem;
+    width: 30%;
+    transition: max-height 500ms ease-in-out; }
+
+
+.card-wrapper:hover { 
+ box-shadow: 0 0 8px #d3d3d3;
+ cursor: pointer;
+ max-height: 300px;
+}
+/* 
+.card-details, .revela-details {
+
+    font-weight: 300;
+    
+    
+} */
+
+
+#descripcion {
+    display: inline-flex;
+    max-width: 220px;
+    
+    ;
+ 
+}
+
+#imgUser {
+    
+
+margin-right: -400px;  }
+
+
+
+
+
+
+card-height-animate {
+    height: 300px;
+}
+
+.card-title {
+    text-align:center;
+    
+}
+#usuarioPrice {
+    font-size: x-large;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: -20px;
+
+}
+
+
+
+#userCnt {
+    margin-bottom: 200px;
+}
 
