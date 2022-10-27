@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import Contador from './Contador';
 const ContadorContainer = () => {
     
@@ -11,21 +11,31 @@ const [contador, clickeo] = useState(0)
   
       let clickSuma = () => {
     
-        clickeo(contador + 1)
+        clickeo(contador + 1 )
+
+        
       }
     
       let clickResta =() => {
-        clickeo(contador -1)
+        
+      clickeo(contador -1)
+        
       }
+
+      
     
+      
     
   return (
-   <> <Contador clickSuma={clickSuma} clickResta={clickResta}
+   <> 
    
-        />
-
-
+   <Contador clickSuma={clickSuma} clickResta={clickResta}/>
     contador={contador}
+
+   
+    
+    
+
    </>
   )
 }

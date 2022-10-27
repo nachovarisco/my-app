@@ -19,6 +19,9 @@ const Contador = ({clickSuma, clickResta, Contador}) => {
 
 
 
+
+
+
 </main>
  </> </>
 
