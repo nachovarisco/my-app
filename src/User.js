@@ -1,4 +1,5 @@
 import React from 'react'
+import Botones from './Botones'
 
 const User = ({usuario}) => {
       return (
@@ -12,6 +13,7 @@ const User = ({usuario}) => {
     <div className ='card-wrapper'>
  <div className ='card-details'>
     <h3 className="card-title"> {usuario.nombre}   </h3>
+    <div> <Botones/>   </div>
     
 
     <h4 id='usuarioPrice'>$ {usuario.precio}</h4>

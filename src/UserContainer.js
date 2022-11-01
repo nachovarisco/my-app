@@ -7,7 +7,7 @@ const UserContainer = () => {
 
     const [usuarios, setUsuarios] = useState ([])
 useEffect (()=>{
-    console.log ("pidiendo usuarios al servidor..")
+  
     // setTimeout (()=> {
     //     console.log ("usuarios recibidos")
     //     console.log("guardo lo que consigo")

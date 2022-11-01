@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'antd';
 
-const Contador = ({clickSuma, clickResta, Contador}) => {
+const Contador = ({clickSuma, clickResta, }) => {
 
 
 
