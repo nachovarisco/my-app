@@ -1,7 +1,7 @@
 import React from 'react'
 import User from './User'
 
-const UserList = ({usuarios}) => {
+const UserList = ({User}) => {
 
 
 

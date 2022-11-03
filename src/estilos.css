@@ -10,7 +10,7 @@
 
 
 #main-header {
-    background-color: aqua;
+    background-color: rgb(0, 255, 255);
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -92,6 +92,10 @@ contador  */
     border: solid black solid 2px;
 }
 
+
+#containerContador {
+    border-bottom: solid black 2px }
+
 /* 
 
 #precioUser {
@@ -165,7 +169,8 @@ justify-content: space-around;
 #imgUser {
     
 
-margin-right: -400px;  }
+margin-right: -500px;
+margin-bottom: -170px;  }
 
 
 
@@ -193,4 +198,7 @@ card-height-animate {
 #userCnt {
     margin-bottom: 200px;
 }
+
+
+
 

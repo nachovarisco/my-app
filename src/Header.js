@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "./Nav";
 
 
-function Header (prop){
+function Header (){
 
-    console.log(prop.nombre)
-    console.log(prop.apellido)
     return (<>
     
         <header id="main-header">
          
-                <p> nos agrada saber que {prop.nombre +"  "+ prop.apellido} esta en nuestra pagina</p>
+
+         <Link to = "/start " ><h2> buenassss</h2></Link>
 
             
             <Nav/>
-            
+          
         </header>
         </>
     )
