@@ -10,7 +10,7 @@ function Header (){
         <header id="main-header">
          
 
-         <Link to = "/start " ><h2> buenassss</h2></Link>
+         <Link to = "/home" ><h2> aaaaaaa</h2></Link>
 
             
             <Nav/>
