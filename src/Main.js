@@ -14,7 +14,7 @@ const Main = () => {
 <Routes>
 
   {/* home start  */}
-  <Route path="/home" element= {<Home/>}  />
+  <Route path="/" element= {<Home/>}  />
   {/* productos */}
   <Route path="/Productos"  element= {<ItemListContainer/>} />
   {/* detalle */}
