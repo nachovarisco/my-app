@@ -17,14 +17,14 @@ const ItemListContainer = () => {
       
 
         console.log ("cargando productos")
-        if(!category){
+        if(category){
             
                 getProductsByCategoryId(category)
                 .then(res => {
                     setItems(res)
                 })
                 .catch(err => 
-                    console.log(err))
+                    console.log("errorr"))
             
         }
         else {
