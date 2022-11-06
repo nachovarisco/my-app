@@ -6,7 +6,7 @@ import ItemListContainer from './ItemListContainer'
 
 const Main = () => {
   return (
-   <main>
+   <main id='main'>
     
 
 
