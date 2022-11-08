@@ -1,8 +1,15 @@
 import React from 'react'
+import ContadorContainer from './ContadorContainer'
+
+
+
+
 
 const Carrito = () => {
   return (
-    <div> <h1>carrito</h1></div>
+    <div>
+    
+    </div>
   )
 }
 

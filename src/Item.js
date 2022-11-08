@@ -1,6 +1,7 @@
 
 import React , {useState }from "react";
-import useCollapse from 'react-collapsed'
+import useCollapse from 'react-collapsed';
+import ContadorContainer from "./ContadorContainer";
 
 
 
@@ -21,17 +22,18 @@ const Item = ({title , image, description , price}) => {
 <div id="cardContainer">
          <h4 id="cardTitle">{title}</h4>
          <h5 id="cardPrice">{price}</h5>
-         <img src = {image} id="cardImg"></img>    
+         <img src = {image} id="cardImg" alt="#"></img>    
      <div>
 <button id= "cardBtn"
         {...getToggleProps({
           onClick: () => setExpanded((prevExpanded) => !prevExpanded),
         })}
       >
-        {isExpanded ? 'menos' : 'ver mas'}
+        {isExpanded ? 'menos' : 'mas'}
       </button>
-      <section {...getCollapseProps()}>{description}🙈</section>
+      <section {...getCollapseProps()}>{description}</section>
     </div>  
+    <ContadorContainer/>
  </div>   </>
         
   

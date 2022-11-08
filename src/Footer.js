@@ -5,8 +5,7 @@ const Footer = () => {
   return (
     <>
     <div id='footer'>
-     <Nav/>
-    </div>
+    <p>todos los derechos reservados</p>    </div>
     
     </>
   )

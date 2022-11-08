@@ -49,7 +49,7 @@ if(category){
 
   return (
     <div>
-        {items.length == 0 ? <h1>loading...tuki...tuki...</h1> : <div id='mainItemContainer'> <ItemList items={items}/> </div> }
+        {items.length === 0 ? <h1>loading..</h1> : <div id='mainItemContainer'> <ItemList items={items}/> </div> }
 
     </div>
   )
