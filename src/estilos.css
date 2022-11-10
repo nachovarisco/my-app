@@ -104,7 +104,7 @@ justify-content: space-evenly;}
 
 
  .Header {
-    position: fixed;
+    position:static;
     top: 0; /* Stick it to the top */
     max-height: 70px;
     width: 100vw;

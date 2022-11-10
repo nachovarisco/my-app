@@ -20,7 +20,7 @@ const Item = ({title , image, description , price}) => {
   return (
     
 <>
-<NavLink to = "/Producto/Item"><div id="cardContainer">
+<NavLink to = "/Productos/Item"><div id="cardContainer">
          <h4 id="cardTitle">{title}</h4>
          <h5 id="cardPrice">{price}</h5>
          <img src = {image} id="cardImg" alt="#"></img>    

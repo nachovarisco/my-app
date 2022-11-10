@@ -23,6 +23,8 @@ const Main = () => {
 {/* carrito  */}
   <Route path="/Carrito"  element= { <Carrito/> } />
 
+  <Route path="/Productos/Item" element= {<ItemDetailContainer/>}/>
+
   <Route path= '*' element = {<h1> ERROR 404 </h1>} />
 
 </Routes>

@@ -1,6 +1,7 @@
 import {useEffect , useState} from 'react'
 import { useParams } from 'react-router-dom'
-import ItemList from './ItemList'
+import ItemListDetail from './ItemListDetail'
+import ItemList from './ItemListDetail'
 import { getProducts, getProductsById } from './utils'
 
 
@@ -21,14 +22,14 @@ const ItemListContainer = () => {
             
                 getProductsById(id)
                 .then(res => {
-                    setItems(res)
+                    setItems(res + console.log(res))
                 })
                 .catch(err => 
                     console.log("errorr"))
             
         }
         else {
-            console.log("pido solo: "+id)
+            console.log(id)
         }
        
 console.log("222")
@@ -49,7 +50,7 @@ if(id){
 
   return (
     <div>
-        {items.length === 0 ? <h1>loading..</h1> : <div id=''> <ItemList items={items}/> </div> }
+        {items.length === 0 ? <h1>loading..</h1> : <div id=''> <ItemListDetail items={items}/> </div> }
 
     </div>
   )
