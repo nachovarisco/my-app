@@ -1,7 +1,8 @@
 
 import React , {useState }from "react";
 import useCollapse from 'react-collapsed';
-import ContadorContainer from "./ContadorContainer";
+import { NavLink } from "react-router-dom";
+import Nav from "./Nav";
 
 
 
@@ -19,7 +20,7 @@ const Item = ({title , image, description , price}) => {
   return (
     
 <>
-<div id="cardContainer">
+<NavLink to = "/Producto/Item"><div id="cardContainer">
          <h4 id="cardTitle">{title}</h4>
          <h5 id="cardPrice">{price}</h5>
          <img src = {image} id="cardImg" alt="#"></img>    
@@ -33,8 +34,8 @@ const Item = ({title , image, description , price}) => {
       </button>
       <section {...getCollapseProps()}>{description}</section>
     </div>  
-    <ContadorContainer/>
- </div>   </>
+    
+ </div> </NavLink>  </>
         
   
   )

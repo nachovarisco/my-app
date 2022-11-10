@@ -3,6 +3,7 @@ import { Route , Router, Routes } from 'react-router-dom'
 import Home from './Home'
 import Carrito from './Carrito'
 import ItemListContainer from './ItemListContainer'
+import ItemDetailContainer from  './ItemDetailContainer'
 
 const Main = () => {
   return (
@@ -18,7 +19,7 @@ const Main = () => {
   {/* productos */}
   <Route path="/Productos"  element= {<ItemListContainer/>} />
   {/* detalle */}
-  <Route path="/Productos/:category"  element= {<ItemListContainer/>} />
+  <Route path="/Productos/:category"  element= {<ItemDetailContainer/>} />
 {/* carrito  */}
   <Route path="/Carrito"  element= { <Carrito/> } />
 
