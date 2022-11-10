@@ -16,7 +16,6 @@ const ItemListContainer = () => {
     useEffect(()=> {
       
 
-        console.log ("cargando productos")
         if(category){
             
                 getProductsByCategoryId(category)
@@ -28,10 +27,10 @@ const ItemListContainer = () => {
             
         }
         else {
-            console.log("pido solo: "+category)
+       
         }
        
-console.log("777777777")
+
 if(category){
     getProductsByCategoryId(category)
 }else {
@@ -39,11 +38,11 @@ if(category){
     getProducts()
         .then ((respuesta)=>{
             setItems(respuesta)
-            console.log(respuesta );
+           ;
            
         })
         .catch((error)=> {
-            console.log(error)
+           
         })}
     },[])
 
