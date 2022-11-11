@@ -8,12 +8,27 @@ const ItemDetail = () => {
 
 
     const producto = randProduct()
+
+
+
+const handleOnAdd = (cantidad) => {
+    console.log ("se agregaron" + cantidad + "productos")
+
+}
+
+
+
+
+
+
+
+
       return (
     <div>
         
         
         <h1>{producto.title +" - $" + producto.price}</h1>
-        <ItemCount/>
+        <ItemCount handleOnAdd={handleOnAdd}/>
         <img src={producto.image} alt = ""></img>
         <p>{producto.description}</p>
         
