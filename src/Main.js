@@ -14,16 +14,19 @@ const Main = () => {
 
 <Routes>
 
-  {/* home start  */}
+  
   <Route path="/" element= {<Home/>}  />
-  {/* productos */}
+ 
   <Route path="/Productos"  element= {<ItemListContainer/>} />
-  {/* detalle */}
+
   <Route path="/Productos/:category"  element= {<ItemListContainer/>} />
-{/* carrito  */}
+
+  <Route path="/Item/:id"  element= {<ItemDetailContainer/>} />
+  
+
   <Route path="/Carrito"  element= { <Carrito/> } />
 
-  <Route path="/Productos/Item" element= {<ItemDetailContainer/>}/>
+ 
 
   <Route path= '*' element = {<h1> ERROR 404 </h1>} />
 

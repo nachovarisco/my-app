@@ -1,12 +1,12 @@
 
 import React , {useState }from "react";
 import useCollapse from 'react-collapsed';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Nav from "./Nav";
 
 
 
-const Item = ({title , image, description , price}) => {
+const Item = ({title , image, description , price, id}) => {
   const [isExpanded, setExpanded] = useState(false)
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
 
@@ -20,10 +20,10 @@ const Item = ({title , image, description , price}) => {
   return (
     
 <>
-<NavLink to = "/Productos/Item"><div id="cardContainer">
-         <h4 id="cardTitle">{title}</h4>
+<div id="cardContainer">
+       <h4 id="cardTitle">{title}</h4>
          <h5 id="cardPrice">{price}</h5>
-         <img src = {image} id="cardImg" alt="#"></img>    
+         <img src = {image} id="cardImg" alt="#"></img> 
      <div>
 <button id= "cardBtn"
         {...getToggleProps({
@@ -34,8 +34,8 @@ const Item = ({title , image, description , price}) => {
       </button>
       <section {...getCollapseProps()}>{description}</section>
     </div>  
-    
- </div> </NavLink>  </>
+    <button>  <Link to={"/item/" + id}> <h4> ver producto</h4>  </Link>  </button>
+ </div>  </>
         
   
   )

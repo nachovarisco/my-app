@@ -28,16 +28,7 @@ export const getProductsByCategoryId = (id) => {
         }, 2000)
     
     }) 
+    return simulacionPedido
 
 }
-export const getProductsById = (id) => {
 
-    let simulacionPedido = new Promise((res) => {
-        setTimeout(() => {
-           
-            res(productosIniciales.filter(item=>item.id ==id ))
-        }, 2000)
-    
-    }) 
-
-}
