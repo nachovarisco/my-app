@@ -1,5 +1,7 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
+import CartWidget from './CartWidget'
+
 
 
 const Nav = () => {
@@ -11,6 +13,7 @@ const Nav = () => {
     <NavLink to= "/Productos/Category:id" id='minorNav'> Camperas</NavLink>
   
     <NavLink to ="/Carrito" id='carrito'> <img src='src\carrito.png'></img></NavLink>
+    <CartWidget/>
 </nav></div>
   )
 }
