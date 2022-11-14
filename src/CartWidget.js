@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { contexto } from './CartProvider'
 
 const CartWidget = () => {
+
+const valorDelContexto = useContext(contexto)
+
+
   return (
     <>
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
- <style>
-
-</style>
+ <Link to = "Carrito">
+<div> <i
+class="fi fi-rr-shopping-cart"></i></div>
+<span>{valorDelContexto.cantidad}</span>
+</Link>
     </>
   )
 }

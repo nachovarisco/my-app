@@ -3,7 +3,7 @@ import React , {useContext, useState }from "react";
 import useCollapse from 'react-collapsed';
 import { Link, NavLink } from "react-router-dom";
 import Nav from "./Nav";
-import {contexto} from "./App"
+import { contexto } from "./CartProvider";
 
 
 

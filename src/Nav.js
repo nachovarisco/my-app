@@ -1,19 +1,25 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
 import CartWidget from './CartWidget'
+import { productosIniciales } from './utils'
 
 
 
 const Nav = () => {
   return (
     <div><nav id='MainNav'>
+    {productosIniciales.map((item) => {
+                return (
+                    <NavLink to={`/productos/${item.category}`} key={item.category} className="link" activeClassName="active">
+                        {item.category}
+                    </NavLink>
+                )})}
 
     <NavLink to ="/Productos" id='minorNav'> productos</NavLink>
-    <NavLink to ="/Productos/Category" id='minorNav'>Remeras</NavLink>
-    <NavLink to= "/Productos/Category:id" id='minorNav'> Camperas</NavLink>
-  
-    <NavLink to ="/Carrito" id='carrito'> <img src='src\carrito.png'></img></NavLink>
-    <CartWidget/>
+   
+ <CartWidget/>
+    
+   
 </nav></div>
   )
 }
