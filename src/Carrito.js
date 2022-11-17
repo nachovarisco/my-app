@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React ,{useRef} from 'react'
 
 
 
@@ -8,26 +8,17 @@ import React ,{useState} from 'react'
 const Carrito = () => {
 
 
-  const [valores, setValores] = useState ({
-    name:"",
-    edad :""
-  })
-   
+ 
   
-
-const handleChange = (e) => {
- setValores  ({
-
-  ...valores,         
-  [e.target.dataset.target] : e.target.value
- })
+const refName = useRef()
+const refEdad = useRef()
 
 
-}
 
   const handleSubmit = (e) => {
   e.preventDefault()
-  console.log(valores)
+  console.log(refName.current.value)
+  console.log(refEdad.current.value)
   
 }
 
@@ -35,10 +26,10 @@ const handleChange = (e) => {
     <div>
    <form onSubmit={handleSubmit}>
     <div className='container'>
-      <input data-target =  "name"  type= "text" onChange={handleChange}/>
+      <input ref={ refName}         type= "text"/>
     </div>
     <div>
-      <input data-target = "edad" type= "text" onChange={handleChange}/>
+      <input  ref={refEdad}      type= "text"/>
     </div>
     <button> guardar    </button>
    </form>
