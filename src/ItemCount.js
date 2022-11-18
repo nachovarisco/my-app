@@ -21,12 +21,12 @@ const ItemCount = ({handleOnAdd}) => {
 
   return (
     <div>
-    <div>
-        <button onClick={handleSumar}>+</button>
+    <div id='itemCount'>
+        <button id='itemCount_sumar' onClick={handleSumar}>+</button>
         <p>{count}</p>
-        <button onClick={handleRestar}>-</button>
+        <button id='itemCount_restar' onClick={handleRestar}>-</button>
     </div>
-<button onClick={handleConfirmar}> confirmar</button>
+<button id='itemCount_confirmar' onClick={handleConfirmar}> confirmar</button>
     </div>
   )
 }

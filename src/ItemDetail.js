@@ -27,16 +27,17 @@ const agregarAlCarrito =() => {
 
 
       return (
-    <div>
+    <div id='itemDetail_container'>
         
         
-        <h1>{producto.title +" - $" + producto.price}</h1>
-        <ItemCount handleOnAdd={handleOnAdd}/>
-        <button onClick={agregarAlCarrito}> añadir al carrito</button>
-        <img src={producto.image} alt = ""></img>
-        <p>{producto.description}</p>
+        <h1 id='itemDetail_title'>{producto.title +" - $" + producto.price}</h1>
+       <div id='itemDetail_button'> <ItemCount  id='itemDetail_count' handleOnAdd={handleOnAdd}/>
+        <button id='itemDetail_addToCart'onClick={agregarAlCarrito}> añadir</button> </div>
+        <img  id='itemDetail_img' src={producto.image} alt = ""></img>
+        <p id='itemDetail_description'>{producto.description}</p>
         
          </div>
+        
   )
 }
 

@@ -26,10 +26,10 @@ const refEdad = useRef()
     <div>
    <form onSubmit={handleSubmit}>
     <div className='container'>
-      <input ref={ refName}         type= "text"/>
+      <input ref={ refName} type= "text"/>
     </div>
     <div>
-      <input  ref={refEdad}      type= "text"/>
+      <input  ref={refEdad} type= "text"/>
     </div>
     <button> guardar    </button>
    </form>
