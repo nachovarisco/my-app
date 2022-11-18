@@ -1,17 +1,13 @@
 
 import React , {useContext, useState }from "react";
-import useCollapse from 'react-collapsed';
 import { Link, NavLink } from "react-router-dom";
 import Nav from "./Nav";
 import { contexto } from "./CartProvider";
 
 
 
-const Item = ({title , image, description , price, id}) => {
-  const [isExpanded, setExpanded] = useState(false)
-  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
-
-   
+const Item = ({title , image,  price, id}) => {
+  
 const resultado = useContext(contexto)
 console.log(resultado.cantidad)
 
@@ -22,23 +18,24 @@ console.log(resultado.cantidad)
   return (
     
 <>
-<div id="cardContainer">
-       <h4 id="cardTitle">{title}</h4>
-         <h5 id="cardPrice">{price}</h5>
-         <img src = {image} id="cardImg" alt="#"></img> 
-     <div>
-<button id= "cardBtn"
-        {...getToggleProps({
-          onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-        })}
-      >
-        {isExpanded ? 'menos' : 'mas'}
-      </button>
-      <section {...getCollapseProps()}>{description}</section>
-    </div>  
-    <button>  <Link to={"/item/" + id}> <h4> ver producto</h4>  </Link>  </button>
- </div>  </>
-        
+
+
+        <div class="card">
+
+  <div class="imgBox">
+    <img src={image} alt="mouse corsair" class="mouse"></img>
+  </div>
+
+  <div class="contentBox">
+    <h3>{title}</h3>
+    <h2 class="price"> $-{price}</h2>
+    <a href="#" class="buy"><Link to={"/item/" + id}> <h4> ver producto</h4>  </Link> </a>
+  </div>
+
+</div>
+
+
+</>
   
   )
 }
