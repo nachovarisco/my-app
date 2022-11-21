@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import {BrowserRouter} from "react-router-dom"
 import CartProvider from "./CartProvider";
 
+import {app, db} from "./firebase"
+console.log  (app)
 
 
 
