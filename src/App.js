@@ -6,7 +6,7 @@ import {BrowserRouter} from "react-router-dom"
 import CartProvider from "./CartProvider";
 
 import {app, db} from "./firebase"
-console.log  (app)
+console.log  (app + db )
 
 
 

@@ -1,8 +1,11 @@
 import React ,{createContext, useState} from 'react'
+import { db } from './firebase'
 
 export  const contexto = createContext()
 
 const {Provider} = contexto
+
+
 
 const CartProvider = ({contenido}) => {
     const [carrito , setCarrito] = useState([   

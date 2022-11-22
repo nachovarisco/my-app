@@ -2,6 +2,9 @@ import {useEffect , useState} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
 import { getProducts, getProductsByCategoryId } from './utils'
+import { db } from './firebase'
+ 
+
 
 
 
