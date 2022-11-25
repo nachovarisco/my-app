@@ -6,21 +6,21 @@ import { productosIniciales } from './utils'
 
 
 const Nav = () => {
+ 
   return (
-    <div><nav id='MainNav'>
-    {productosIniciales.map((item) => {
-                return (
-                    <NavLink to={`/productos/${item.category}`} key={item.category} className="link" activeClassName="active">
-                        {item.category}
-                    </NavLink>
-                )})}
+<nav className='nav'>
+
+
+
 
     <NavLink to ="/Productos" id='minorNav'> productos</NavLink>
+    <NavLink to="/productos/remeras">remeras</NavLink>
+    <NavLink to="/productos/mochilas">mochilas</NavLink>
    
  <CartWidget/>
     
-   
-</nav></div>
+ </nav>
+
   )
 }
 

@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 
 
 
-const ItemDetail = () => {
-    const producto = randProduct()
+const ItemDetail = ({producto}) => {
+    // const producto = randProduct()
 const valorDelContexto = useContext(contexto)
 
 const handleOnAdd = (cantidad) => {
@@ -52,7 +52,7 @@ const agregarAlCarrito =() => {
       </div>
       <div class="column-xs-12 column-md-5">
         <h1>{producto.title}</h1>
-        <h2>{" - $" + producto.price}</h2>
+        <h2>{"$" + producto.price}</h2>
         <div class="description">
           <p>  {producto.description}  </p>
         </div>

@@ -364,7 +364,7 @@ height: 100%;
 }
 
 .card__container {
-  display: flex;
+  
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -376,7 +376,7 @@ height: 100%;
 }
 
 .card__header {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -389,7 +389,7 @@ height: 100%;
 .card__price {
   width: 100%;
   font-size: 32px;
-  text-align: right;
+  ;
 }
 
 .card__title,
@@ -1307,5 +1307,3 @@ footer {
 #item-label {
   padding-left: -200px;
 }
-Link {color: #FF0000;
-  text-decoration: none;}

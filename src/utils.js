@@ -12,7 +12,7 @@ let simulacionPedido = new Promise((res) => {
     setTimeout(() => {
        
         res(productosIniciales);
-        console.log("cargados")
+        
     }, 2000); 
 })
 

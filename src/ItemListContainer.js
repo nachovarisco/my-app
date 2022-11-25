@@ -1,8 +1,10 @@
 import {useEffect , useState} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
-import { getProducts, getProductsByCategoryId } from './utils'
+
 import { db } from './firebase'
+import {collection, getDocs, query, where} from "firebase/firestore"
+
  
 
 
@@ -17,36 +19,51 @@ const ItemListContainer = () => {
     
 
     useEffect(()=> {
-      
-
-        if(category){
-            
-                getProductsByCategoryId(category)
-                .then(res => {
-                    setItems(res)
-                })
-                .catch(err => 
-                    console.log("errorr"))
-            
-        }
-        else {
-       
-        }
-       
+      const productsCollection = collection(db, "productos")
 
 if(category){
-    getProductsByCategoryId(category)
-}else {
 
-    getProducts()
-        .then ((respuesta)=>{
-            setItems(respuesta)
-           ;
-           
-        })
-        .catch((error)=> {
-           
-        })}
+  const productsCollection = collection(db, "productos")
+  const flitro =query(productsCollection, where ("category", "==", category))
+    const consulta = getDocs (flitro)
+   
+
+
+    consulta.then((resultado)=> {
+      const productos= resultado.docs.map(doc=>({...doc.data(),id:doc.id}))
+      setItems(productos)
+ 
+    })
+    .catch((error)=> {
+      console.log(error)
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+else { const productsCollection = collection(db, "productos")
+     const consulta = getDocs (productsCollection)
+
+
+consulta.then((resultado) => {
+ const productos= resultado.docs.map(doc=>({...doc.data(),id:doc.id}))
+ setItems(productos)
+})
+.catch((error) => {
+console.log(error)
+})}
     },[])
 
   return (

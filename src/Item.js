@@ -9,7 +9,7 @@ import { contexto } from "./CartProvider";
 const Item = ({title , image,  price, id}) => {
   
 const resultado = useContext(contexto)
-console.log(resultado.cantidad)
+
 
   // mi data es item
 
@@ -51,7 +51,8 @@ console.log(resultado.cantidad)
         
             <div class="card__info">
                 <div class="card__header">
-                    <div class="card__rating">
+                <h1 class="card__title" >{title}</h1>
+                <div class="card__rating">
                         <svg height="25" width="23" class="star rating" data-rating="1">
                             <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78"/>
                         </svg>
@@ -68,9 +69,9 @@ console.log(resultado.cantidad)
                             <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78"/>
                         </svg>
                     </div>
-                    <p class="card__price"> $-{price}</p>
+                    <p class="card__price"> ${price}</p>
                 </div>
-                <h1 class="card__title" >{title}</h1>
+                
                 <h2 class="card__subtitle">FHC - 250x</h2>
             </div>
       
