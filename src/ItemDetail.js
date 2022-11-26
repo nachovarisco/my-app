@@ -1,43 +1,43 @@
 import { randProduct } from '@ngneat/falso'
-import { contexto } from './CartProvider'
-import React, { useContext } from 'react'
+import { contexto, useCarrito } from './CartProvider'
+import React, { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 
 
 
+
 const ItemDetail = ({producto}) => {
-    // const producto = randProduct()
-const valorDelContexto = useContext(contexto)
+
+ const {agregarProducto} =  useCarrito()
+ const [cantidad, setCantidad]= useState(0)
+
+ const [confirmado, setConfirmado] = useState(false)
+
 
 const handleOnAdd = (cantidad) => {
     console.log ("se agregaron" + cantidad + "productos")
+    setCantidad(cantidad)
+    setConfirmado(true)
 }
 
 
-
+const handleClick = () => {
+  agregarProducto(producto, cantidad)
+}
 
 
 
 
 const agregarAlCarrito =() => {
 
-   valorDelContexto.vaciarCarrito()
+  //  valorDelContexto.vaciarCarrito()
 
 }
 
 
       return (
-    // <div id='itemDetail_container'>
-        
-        
-    //     <h1 id='itemDetail_title'>{producto.title +" - $" + producto.price}</h1>
-    //    <div id='itemDetail_button'> <ItemCount  id='itemDetail_count' handleOnAdd={handleOnAdd}/>
-    //     <button id='itemDetail_addToCart'onClick={agregarAlCarrito}> añadir</button> </div>
-    //     <img  id='itemDetail_img' src={producto.image} alt = ""></img>
-    //     <p id='itemDetail_description'>{producto.description}</p>
-        
-    //      </div>
+ 
     <main id='item-detail-main'>
   <div class="container">
       </div>
@@ -56,7 +56,13 @@ const agregarAlCarrito =() => {
         <div class="description">
           <p>  {producto.description}  </p>
         </div>
-     <button  class="add-to-cart" onClick={agregarAlCarrito}> añadir</button>
+     
+     <button  class="add-to-cart" onClick={agregarAlCarrito}>   añadir
+     </button>
+     <div>
+        <ItemCount init={cantidad} handleOnAdd={handleOnAdd}/>
+        {confirmado && <button onClick={handleClick}>agregar al carrito</button>}
+       </div>
     </div>
   </div>
 </main>

@@ -30,7 +30,7 @@
 } 
 
 #carrito{
-    display: inline;
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -94,7 +94,7 @@ justify-content: space-evenly;}
     top: 0; /* Stick it to the top */
     max-height: 70px;
     width: 100vw;
-  
+  display:flex ;
     display: grid;
     grid-template-areas: "logo nav";
   
@@ -109,7 +109,7 @@ justify-content: space-evenly;}
   }
   
   .Nav {
-    display: grid;
+    display: flex;
     grid-area: nav;
     grid-template-columns: repeat(4, auto);
     align-items: center;
@@ -1028,7 +1028,7 @@ a:hover {
   color: #333;
 }
 a.active {
-  color: #333;
+  color: rgb(36, 200, 229);
 }
 
 h1, h2, h3, h4 {

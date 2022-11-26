@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({handleOnAdd}) => {
+const ItemCount = ({handleOnAdd, init}) => {
 
 
 
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(init)
 
     const handleSumar = () => {
         setCount(count + 1 )
@@ -13,7 +13,8 @@ const ItemCount = ({handleOnAdd}) => {
 
     const handleRestar = () => {
         setCount(count - 1 )
-    }
+        
+       }
 
     const handleConfirmar = () => {
         handleOnAdd(count)

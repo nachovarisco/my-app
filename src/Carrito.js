@@ -1,6 +1,9 @@
 import { collection, addDoc , serverTimestamp } from 'firebase/firestore'
 import React ,{useRef} from 'react'
+import { useCarrito } from './CartProvider'
 import { db } from './firebase'
+
+
 
 
 
@@ -9,11 +12,11 @@ import { db } from './firebase'
 
 const Carrito = () => {
 
-
+const valorDelContexto = useCarrito()
  
   
 const refName = useRef()
-const refEdad = useRef()
+const refTelefono = useRef()
 
 
 
@@ -22,15 +25,19 @@ const refEdad = useRef()
 
    const orden = {
     buyer : {
-      name: "carlito",
-      phone : "2222222",
+      name: refName,
+    
+      phone : refTelefono,
+
 
     },
     products : [],
     total: 100,
     date : serverTimestamp(),
    }
-  const ordersCollection = collection(db, "productos")
+   console.log(refName,refTelefono)
+  
+  const ordersCollection = collection(db, "usuarios")
   const consulta = addDoc(ordersCollection, orden)
 
   consulta 
@@ -50,7 +57,7 @@ const refEdad = useRef()
       <input ref={ refName} type= "text"/>
     </div>
     <div>
-      <input  ref={refEdad} type= "text"/>
+      <input  ref={refTelefono} type= "text"/>
     </div>
     <button> guardar    </button>
    </form>
