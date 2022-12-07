@@ -13,9 +13,9 @@ const Nav = () => {
 
 
 
-    <NavLink to ="/Productos"> productos</NavLink>
-    <NavLink to="/productos/remeras">remeras</NavLink>
-    <NavLink to="/productos/mochilas">mochilas</NavLink>
+    <NavLink to='/productos'> productos</NavLink>
+    <NavLink to='/productos/remeras'>remeras</NavLink>
+    <NavLink to='/productos/mochilas'>mochilas</NavLink>
  <CartWidget/>
     
  </nav>

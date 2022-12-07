@@ -15,11 +15,13 @@ import {collection, getDocs, query, where} from "firebase/firestore"
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
+
+   
     const {category} = useParams()
     
 
     useEffect(()=> {
-      const productsCollection = collection(db, "productos")
+      
 
 if(category){
 
@@ -36,19 +38,7 @@ if(category){
     })
     .catch((error)=> {
       console.log(error)
-    })
-
-
-
-
-
-
-
-
-
-
-
-
+    }, [])
 }
 
 
@@ -64,7 +54,7 @@ consulta.then((resultado) => {
 .catch((error) => {
 console.log(error)
 })}
-    },[])
+    },[category])
 
   return (
     <div>
