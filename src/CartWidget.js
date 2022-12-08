@@ -8,12 +8,15 @@ const CartWidget = () => {
 const valorDelContexto = useContext(contexto)
 
 
+const cantidadCarrito = localStorage.getItem("cantidad")
+console.log(cantidadCarrito)
+
   return (
     <>
  <Link to = "/Carrito">
 <div> <i
 class="fi fi-rr-shopping-cart"></i></div>
-<span>{valorDelContexto.cantidadTotal }</span>
+<span>{cantidadCarrito}</span>
 </Link>
     </>
   )

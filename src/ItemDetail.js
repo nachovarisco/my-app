@@ -19,6 +19,10 @@ const handleOnAdd = (cantidad) => {
     console.log ("se agregaron" + cantidad + " productos")
     setCantidad(cantidad)
     setConfirmado(true)
+
+    localStorage.setItem("producto" , producto)
+    localStorage.setItem("cantidad" , cantidad)
+
 //     if (confirmado (true))
 //     { isVisible(false)}
 // else
@@ -29,6 +33,10 @@ const handleOnAdd = (cantidad) => {
 
 const handleClick = () => {
   agregarProducto(producto, cantidad)
+  localStorage.setItem("producto" , JSON.stringify(producto))
+  localStorage.setItem("cantidad" , cantidad)
+
+
 }
 
 

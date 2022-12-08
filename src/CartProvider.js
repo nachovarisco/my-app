@@ -24,6 +24,9 @@ const CartProvider = ({contenido}) => {
       }
 
       const agregarProducto = (producto, cantidad) => {
+
+      localStorage.setItem("producto" , producto)
+      localStorage.setItem("cantidad" , cantidad)
         
         console.log(producto)
         console.log(cantidad)
