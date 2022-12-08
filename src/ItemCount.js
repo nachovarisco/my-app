@@ -27,7 +27,7 @@ const ItemCount = ({handleOnAdd, init}) => {
         <p>{count}</p>
         <button id='itemCount_restar' onClick={handleRestar}>-</button>
     </div>
-<button id='itemCount_confirmar' onClick={handleConfirmar}> confirmar</button>
+<button id='itemCount_confirmar' onClick={handleConfirmar}> confirmar cantidad</button>
     </div>
   )
 }

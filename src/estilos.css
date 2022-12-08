@@ -243,7 +243,8 @@ justify-content: space-around;
 #itemCount{
   display: flex;
   justify-content: space-around;
-
+background-color:  #282c34 ;
+border: #282c34 2px solid;
 }
 
 
@@ -251,11 +252,28 @@ justify-content: space-around;
   width: 20px;
   height: 20px;
   display: flexbox;
+  background-color:  #282c34;
+  border: #282c34 2px solid;
+}
+
+#itemCount_confirmar {
+  background-color:  #282c34;
+  border: #121111 2px solid;
+  min-width: 200px;
+  
 }
 
 
 
+#add-to-cart-confirm{
+  background-color:  #282c34;
+  border: #121111 2px solid;
+  height: 74px;
+  margin-left: 10px;
+  min-width: 100px;
+ 
 
+}
 
 
 
@@ -1307,3 +1325,13 @@ footer {
 #item-label {
   padding-left: -200px;
 }
+
+
+#add-to-cart-detail{
+
+background-color: #282c34;  
+  border: #121314 2px solid;
+    display: flex;
+    justify-content: space-around;
+  
+  min-width: 350px;}
